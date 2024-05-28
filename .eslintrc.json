@@ -1,0 +1,85 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "no-unreachable": "error",
+    "curly": [
+      "error",
+      "all"
+    ],
+    "eqeqeq": [
+      "error",
+      "smart"
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "optionalDependencies": false,
+        "peerDependencies": false
+      }
+    ],
+    "no-shadow": [
+      "error",
+      {
+        "hoist": "all"
+      }
+    ],
+    "prefer-const": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          [
+            "external",
+            "builtin"
+          ],
+          "internal",
+          [
+            "parent",
+            "sibling",
+            "index"
+          ]
+        ]
+      }
+    ],
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": [
+          "none",
+          "all",
+          "multiple",
+          "single"
+        ]
+      }
+    ],
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "return"
+      }
+    ]
+  },
+  "plugins": [
+    "import"
+  ]
+}
